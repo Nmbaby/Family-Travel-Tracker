@@ -4,6 +4,9 @@ import pg from "pg";
 import "dotenv/config";
 const app = express();
 const PORT = process.env.PORT || 3000;
+import helmet from "helmet";
+app.disable("x-powered-by");
+app.use(helmet());
 
 // const db = new pg.Client({
 //   user: "postgres",
